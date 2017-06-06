@@ -1,0 +1,108 @@
+</!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript newboston 28 Arrays, 29 Other Ways to Create Arrays, 30 Array Properties and Methods, 31 Join and Pop, 32 Reverse, Push, Sort, 33 Add Array Elements Using A Loop, 34 Cool Technique to Print Array Elements, 35 Associative Arrays</title>
+</head>
+<body>
+<p>Array is a way to store multiple values in a single variable or a single object.  Lists include names, ages, SSN, manage long lists.</p>
+<script type="text/javascript">
+	var person1 = "Bucky";
+	var person2 = "Tommy";
+	var person3 = "Sarah";
+	var person4 = "Hanah";
+	var person5 = "Mikety";
+	var person6 = "needarray";
+
+	var peoplenames = new Array("Bucky","Tommy","Sarah","Hanah","Mikety");
+	document.write(peoplenames); //Returns Bucky,Tommy,Sarah,Hanah,Mikety
+	document.write("<br>");
+	document.write(peoplenames[0]); //Returns Bucky
+	document.write("<br>");
+	document.write(peoplenames[3]); //Returns Hanah
+	document.write("<br>");
+
+	var things = new Array(3); //store three items
+	things[0] = "jersey shore";
+	things[1] = "brian regan";
+	things[2] = "thenewboston";
+	document.write(things[2]);
+	document.write("<br>");
+
+	var stuff = new Array(); //unknown number of items stored in array stuff
+	stuff[0] = "baconator";
+	stuff[1] = "old pumpkins";
+	stuff[2] = "george";
+	document.write(stuff[1]);
+	document.write("<br>");
+</script>
+
+<p>Arrays have properties and methods.</p>
+<script type="text/javascript">
+	var dudes = new Array("Bucky","Dan","Randy");
+	document.write(dudes.length);
+	document.write("<br>");
+
+	var chicks = new Array("Lisa","Erin","Hannah");
+	var people = dudes.concat(chicks);
+	document.write("<br>");
+	document.write(people[5]);  //returns Hannah
+	var people = chicks.concat(dudes);
+	document.write(people[5]);  //returns Randy
+	document.write("<br>");
+
+	var movies = new Array("Avatar","Good Will Hunting","Vanilla Sky","Fight Club");
+	var string1 = movies.join();  //.join() combines items in an array separated by a comma
+	document.write(string1); //returns Avatar,Good Will Hunting,Vanilla Sky,Fight Club
+	document.write("<br>");
+	var string1 = movies.join(", ");  //.join() combines items in an array separated by a comma and space
+	document.write(string1); //returns Avatar, Good Will Hunting, Vanilla Sky, Fight Club
+	document.write("<br>");
+	document.write(movies[3] + "<br>")
+	movies.pop();  //deletes the last item in an array; in this case, Fight Club
+	document.write(movies[3] + "<br>")
+	document.write(movies)  //returns Avatar,Good Will Hunting,Vanilla Sky
+	document.write("<br>");
+
+	var bodyparts = new Array("head","shoulders","knees","toes");
+	bodyparts.reverse();
+	document.write(bodyparts); //returns toes,knees,shoulders,head
+	document.write("<br>");
+	bodyparts.push("tongue","liver");  //adds new items to an Array
+	document.write(bodyparts); //returns toes,knees,shoulders,head,tongue,liver
+	document.write("<br>");
+	bodyparts.sort();  //sorts items in a list alphabetical
+	document.write(bodyparts); //returns head,knees,liver,shoulders,toes,tongue
+	document.write("<br>");
+</script>
+
+<p>Add array elements using a loop</p>
+<script type="text/javascript">
+	var pie = prompt("Enter your name:", "what appears in the text box by default");
+	document.write("Hello " + pie);
+
+	var crap = new Array(3);
+	for(i=0;i<3;i++){
+		crap[i] = prompt("Add something to the array:", "")
+	}
+	document.write(crap[0], crap[1], crap[2]);  //returns what was added in something to the array
+</script>
+
+<p>Printing out an array</p>
+<script type="text/javascript">
+	var stuff = new Array("apples","pears","bacon","tuna","ham");
+	stuff.sort();
+	for(i=0;i<stuff.length;i++){
+		document.write(stuff[i] + "<br>");
+	}	
+</script>
+
+<p>Associative Arrays.  Replace array reference numbers with string or characters.  Replace 0 and 1 with color and food.</p>
+<script type="text/javascript">
+	bucky["color"] = "blue";
+	bucky["food"] = "hot pockets";
+	document.write(bucky["food"]);  //supposed to return hot pockets.  It didn't.
+	document.write("buckys favorite food is");
+</script>
+
+</body>
+</html>

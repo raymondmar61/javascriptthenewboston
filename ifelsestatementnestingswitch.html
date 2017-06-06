@@ -1,0 +1,81 @@
+<!doctype html>
+<head>
+<title>JavaScript newboston 14 15 16 17 18 If Else Statement Nesting Complex Conditions Switch</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var apples = 34;
+	var hotdogs = 53;
+	var blue = 43;
+	var red = 43;
+
+
+	/* if(comparison) {
+		document.write("Yay it worked!")
+	} */
+
+	if(apples!=hotdogs){
+		document.write("<p>Yay it worked!</p>");
+	}
+
+	/* if(test){
+		document.write("If statement is true");
+	}else{
+		document.write("Else statement is true);
+	} */
+
+	if (2==3) {
+		document.write("<p>I love hotpockets</p>");
+	}else{
+		document.write("<p>I love strawberries</p>");
+	}
+	if (blue==red) {
+		document.write("<p>I love hotpockets</p>");
+	}else{
+		document.write("<p>I love strawberries</p>");
+	}
+	if (blue>=20) {
+		document.write("<p>I love hotpockets</p>");
+	}else{
+		document.write("<p>I love strawberries</p>");
+	}
+
+	var firstName = "bucky";
+	var lastName = "covington";
+	if(firstName=="bucky"){
+		if(lastName=="roberts"){
+			document.write("<p>Welcome bucky roberts!</p>")
+		}else{
+			document.write("<p>Welcome bucky someone!</p>")
+		}
+	}
+
+	var first = "bucky";
+	var last = "roberts";
+	if ((first=="bucky") && (last=="roberts")){
+		document.write("<p>hey good job buddy erhe sia eda</p>");
+	}
+	if((first=="bucky") || (last="roberts")){
+		document.write("<p>bacon</p>");
+	}
+
+	var girl = "emily";
+	switch(girl){
+		case "natalie":
+			document.write("<p>you must like garden state</p>");
+			break;
+		case "ashley":
+			document.write("<p>oo fan of twilight ey?</p>");
+			break;
+		case "emily":
+			document.write("<p>British love</p>");
+			break;
+		default:
+			document.write("<p>this is the default.  No break; needed</p>")
+	}
+
+</script>
+
+</body>
+</html>

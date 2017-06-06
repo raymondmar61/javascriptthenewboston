@@ -1,0 +1,64 @@
+<!doctype html>
+<head>
+<title>JavaScript newboston Functions</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	function funky() {
+		alert("Ouch!!!!"); //Opens pop up alert window
+	}
+
+	function meatball(x){
+		alert("I love " + x);
+	}
+
+	function apples(one, two) {
+		document.write(one + " is better than " +two+ "</br>");
+		document.write("test </br> works <p> even paragraph</p>")
+	}
+
+	function tooeasy() {
+		return "gametime";
+	}
+
+	function addNumbers(a,b){
+		var c = a + b;
+		return c;
+	}
+
+	function doFirst(){
+		document.write("<p>I am first bo!</p>");	
+	}
+
+	function doSecond(){
+		document.write("<p>  222222!!! </p>");		
+	}
+
+	function start() {
+		doFirst();
+		doSecond();
+	}
+
+	//funky(); simple way to call a function.  Type function name and paranthesis
+	meatball("bacon");
+	meatball("natalie protman");
+	meatball("good will hunting");
+	apples("bucky","hobart");
+	apples("counting crows","beiber");
+	apples("strawberry","coconut");
+	tooeasy(); //calling a function itself does nothing to return the value
+	document.write(tooeasy());
+	document.write("<br>");
+	document.write(tooeasy() + "<p>");
+	addNumbers(3,6); //calling a function itself does nothing to return the value
+	document.write(addNumbers(3,6));
+	start();
+</script>
+<form>
+<input type="button" value="touch me" onclick="funky()">
+</form>
+<p>It's common practice to include <!-- and //--> just in case someone with an older browser can't view JavaScript.</p>
+</body>
+</html>

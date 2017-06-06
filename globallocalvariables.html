@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+<title>JavaScript newboston 11 Global And Local Variables</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var girl = " kelsey ";
+
+	function spit(){
+		document.write(girl);
+	}
+
+	spit();
+	document.write("<p>" +girl+ "</p>");
+
+	function spitlocal(){
+		var girllocal = " courtney ";
+		document.write(girllocal);
+	}
+
+	spitlocal();
+	document.write("<p>" +girllocal+ "</p>"); // no courtney because girllocal is a local variable to spitlocal()
+</script>
+
+</body>
+</html>

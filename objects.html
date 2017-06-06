@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+<title>JavaScript newboston 24 Objects, 25 Creating Our Own Objects, 26 Object Initializers, 27 Adding Methods To Our Objects</title>
+</head>
+<script type="text/javascript">
+	var tuna = "hey I am a tuna fish";
+	document.write(tuna.length); //length is a built-in property for object tuna
+
+	function person(name, age){ //constructor function.  person is an object, name and age are properties
+		this.name = name;
+		this.age = age;
+	} 
+
+	var bucky = new person("Bucky Roberts", 24);
+	var taylor = new person("Taylor Swift", 20);
+
+	buckyoi = {name: "Bucky Roberts", age: 24}; //object initialize (oi)
+	tayloroi = {name: "Taylor Swift", age: 20};
+
+	function people(name, age){  //adding a method yearsUntilRetire to an object people
+		this.name = name;
+		this.age = age;
+		this.yearsUntilRetire = yearsLeft;
+	}
+
+	function yearsLeft(){
+		var numYears = 65 - this.age;
+		return numYears;
+	}
+
+	var natalie = new people("Natalie Portman", 28)
+	var bucky = new people("Bucky Roberts", 24)
+
+</script>
+<body>
+<p>Object Oriented Programming.  An object with it's own properites or variables and methods or actions.  For example, tuna is an object.  Tuna has it's own properties and methods, and I believe access to built-in properties and built-in methods.</p>
+<script type="text/javascript">
+	document.write(bucky.name);
+	document.write("<br>")
+	document.write(taylor.age);
+
+</script>
+
+<p>Object Initializer.  Another way to create an object.  Much faster than constuctor function or construct an object using a function.  One line code.</p>
+<script type="text/javascript">
+	document.write(buckyoi.name + " loves " + tayloroi.name + " because she is " + tayloroi.age)
+</script>
+<br>
+<p>Adding methods to our objects</p>
+<script type="text/javascript">
+	document.write(natalie.yearsUntilRetire());
+	document.write(bucky.yearsUntilRetire());
+
+</script>
+</body>
+</html>
